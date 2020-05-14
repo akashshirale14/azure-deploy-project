@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h2 class="bg-success">Your Appointment Details</h2>
+    <table class="table table-bordered table-striped table-condensed">
+      <thead class="thead-dark">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th>Service Type</th>
+          <th>Appointment Date</th>
+          <th>Appointment Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td th:text="${customer.firstName}" />
+          <td th:text="${customer.lastName}" />
+          <td th:text="${customer.email}" />
+          <td th:text="${customer.phoneNumber}" />
+          <td th:text="${customer.serviceType}" />
+          <td th:text="${customer.bookingDate}" />
+          <td th:text="${customer.bookingTime}" />
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
